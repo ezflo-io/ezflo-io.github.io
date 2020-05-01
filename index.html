@@ -36,14 +36,20 @@
                 padding: 0;
             }
             body {
-                font: 20px 'Source Serif Pro', sans-serif;
+                font-size: 20px;
+                font-family: 'Source Serif Pro', -apple-system, BlinkMacSystemFont, sans-serif;
                 text-align: center;
                 color: #fcc800;
                 background-color: #00305e;
                 line-height: 2rem;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
+                text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+                text-rendering: auto;
+                text-rendering: optimizeSpeed;
+                text-rendering: optimizeLegibility;
+                text-rendering: geometricPrecision;
+                text-rendering: inherit;
             }
+
             article {
                 display: block;
                 text-align: left;
