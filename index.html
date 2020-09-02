@@ -13,95 +13,178 @@
         <meta name="robots" content="index, follow" />
         <meta name="language" content="English" />
         <meta charset="utf-8" />
-        <html prefix="og: http://ogp.me/ns#">
+        <html prefix="og: http://ogp.me/ns#" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,900"
-            rel="stylesheet"
-            type="text/css"
-        />
+        <link rel="stylesheet" href="app.css" />
         <style>
-            h1 {
-                font-size: 50px;
-                line-height: 3.5rem;
-            }
-            h2 {
-                font-size: 25px;
-                color: #ffed9a;
-            }
-            h1,
-            h2 {
-                margin: 0;
-                padding: 0;
-            }
             body {
-                font-size: 20px;
-                font-family: 'Source Serif Pro', -apple-system, BlinkMacSystemFont, sans-serif;
-                text-align: center;
-                color: #fff;
-                background-color: #222;
-                line-height: 2rem;
-                text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-                text-rendering: auto;
-                text-rendering: optimizeSpeed;
-                text-rendering: optimizeLegibility;
-                text-rendering: geometricPrecision;
-                text-rendering: inherit;
+                -moz-osx-font-smoothing: auto;
+                -webkit-font-smoothing: auto;
+                font-family: -apple-system, BlinkMacSystemFont, avenir next,
+                    avenir, helvetica neue, helvetica, Ubuntu, roboto, noto,
+                    segoe ui, arial, sans-serif !important;
             }
 
-            article {
-                display: block;
-                text-align: left;
-                width: 60%;
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: Meslo, Menlo, Menlo, Consolas, Monaco,
+                    Liberation Mono, Lucida Console, monospace !important;
+            }
+            img {
                 margin: 0 auto;
             }
-            @media only screen and (max-width: 768px) {
-                article {
-                    display: block;
-                    text-align: left;
-                    width: 85%;
-                    margin: 0 auto;
-                }
-                p {
-                    margin-top: 1.5rem;
-                }
-            }
-            .centered {
-                position: fixed;
-                top: 45%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
             p {
-                margin-top: 2rem;
+                margin-top: 0.5rem;
+            }
+
+            p.mode-summary-copy {
+                width: 400px;
+                max-width: 90vw;
+            }
+
+            @media only screen and (min-width: 768px) {
+                p.mode-summary-copy {
+                    max-width: 40vw;
+                }
+            }
+
+            #top-stars {
+                position: fixed;
+                top: -8vw;
+                left: 0;
+                opacity: 0.7;
+                -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+                filter: alpha(opacity=70);
+                z-index: -1;
+            }
+
+            @media only screen and (max-width: 640px) {
+                #top-stars {
+                    bottom: 0;
+                }
+            }
+            #ezflo-screenshot {
+                max-width: 1100px;
             }
         </style>
     </head>
-    <body>
-        <article class="centered">
-            <h1>ezflo</h1>
-            <h2>
-                Maker-checker tool for your digital workflow
-            </h2>
-            <p>
-                Ezflo is a cloud based tool for content creators, digital
-                marketing agencies, Govt. organisatons and news agencies to
-                manage their content create->review->approval->publish workflow.
-            </p>
-        </article>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-164629579-1"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || []
-            function gtag() {
-                dataLayer.push(arguments)
-            }
-            gtag('js', new Date())
-            gtag('config', 'UA-164629579-1')
-        </script>
+    <body class="bg-indigo-700 text-center">
+        <picture id="top-stars" class="object-cover w-screen h-screen">
+            <img src="./1920_stars.png"
+        /></picture>
+
+        <section
+            class="flex flex-col md:flex-row flex-center w-screen min-h-screen"
+        >
+            <div id="picture" class="flex flex-col flex-center w-1/2">
+                <h2
+                    id="title"
+                    class="mt-5 mb-3 text-3xl text-yellow-ezflo font-bold"
+                >
+                    ezflo
+                </h2>
+                <div id="subtitle" class="mb-5 text-white">
+                    <h6 class="whitespace-no-wrap">
+                        Maker-checker tool for your digital workflow
+                    </h6>
+                </div>
+                <picture
+                    id="ezflo-screenshot"
+                    class="object-cover object-center w-screen md:w-full"
+                >
+                    <img src="./project-1.svg" alt="ezflo"
+                /></picture>
+            </div>
+            <div
+                id="summary"
+                class="flex flex-initial flex-col flex-center w-screen md:w-1/2"
+            >
+                <div
+                    id="sync-mode-summary"
+                    class="flex flex-initial flex-col justify-center items-start"
+                >
+                    <div class="ezflo-mode mb-2 mt-12 flex flex-center">
+                        <span
+                            class="rounded-full h-3 w-3 bg-green-muted inline-block mr-3"
+                        ></span>
+                        <h1 class="font-bold text-2xl text-white">
+                            Payment scams
+                        </h1>
+                    </div>
+                    <p class="mode-summary-copy text-gray-300 text-left ml-6">
+                        Sometimes
+                        <b class="text-yellow-ezflo">fraudsters can bypass</b>
+                        the digital checks and balances of transaction
+                        protocols. A second user in dual approval helps
+                        <b class="text-yellow-ezflo"
+                            >double-check the transaction</b
+                        >
+                        before authorizing.
+                    </p>
+                </div>
+                <div
+                    id="location-mode-summary"
+                    class="flex flex-initial flex-col justify-center items-start"
+                >
+                    <div class="ezflo-mode mb-2 mt-12 flex flex-center">
+                        <span
+                            class="rounded-full h-3 w-3 bg-yellow-ezflo inline-block mr-3"
+                        ></span>
+                        <h1 class="font-bold text-2xl text-white">
+                            Internal fraud
+                        </h1>
+                    </div>
+                    <p
+                        class="mode-summary-copy text-gray-300 text-left ml-6 w-1/2 min-w-64"
+                    >
+                        Unfortunately, embezzling and
+                        <b class="text-yellow-ezflo"
+                            >illicit financial activity</b
+                        >
+                        does happen within a bank’s own workforce. Dual approval
+                        helps fight
+                        <b class="text-yellow-ezflo">white-collar crime</b> by
+                        serving as a deterrent to temptation, along with
+                        <b class="text-yellow-ezflo">creating transparency</b>
+                        in core business processes to catch the early stages of
+                        illegal activity.
+                    </p>
+                </div>
+                <div
+                    id="sensor-mode-summary"
+                    class="flex flex-initial flex-col justify-center items-start"
+                >
+                    <div class="ezflo-mode mb-2 mt-12 flex flex-center">
+                        <span
+                            class="rounded-full h-3 w-3 bg-blue-muted inline-block mr-3"
+                        ></span>
+                        <h1 class="font-bold text-2xl text-white">
+                            Hacked data
+                        </h1>
+                        <span
+                            class="rounded-full px-2 py-1 text-sm font-mono bg-mauve text-gray-600 ml-3"
+                            >hot cake</span
+                        >
+                    </div>
+                    <p
+                        class="mode-summary-copy text-gray-300 text-left ml-6 mb-5 w-1/2 min-w-64"
+                    >
+                        Having dual approval can prevent the criminal from
+                        completing the transaction by
+                        <b class="text-yellow-ezflo"
+                            >cross-checking verifying customer data</b
+                        >
+                        and known information, such as if a transaction is
+                        happening outside of the country or state the customer
+                        normally conducts business.
+                    </p>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
