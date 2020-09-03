@@ -16,66 +16,11 @@
         <html prefix="og: http://ogp.me/ns#" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="app.css" />
-        <style>
-            body {
-                -moz-osx-font-smoothing: auto;
-                -webkit-font-smoothing: auto;
-                font-family: -apple-system, BlinkMacSystemFont, avenir next,
-                    avenir, helvetica neue, helvetica, Ubuntu, roboto, noto,
-                    segoe ui, arial, sans-serif !important;
-            }
-
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                font-family: Meslo, Menlo, Menlo, Consolas, Monaco,
-                    Liberation Mono, Lucida Console, monospace !important;
-            }
-            img {
-                margin: 0 auto;
-            }
-            p {
-                margin-top: 0.5rem;
-            }
-
-            p.mode-summary-copy {
-                width: 400px;
-                max-width: 90vw;
-            }
-
-            @media only screen and (min-width: 768px) {
-                p.mode-summary-copy {
-                    max-width: 40vw;
-                }
-            }
-
-            #top-stars {
-                position: fixed;
-                top: -8vw;
-                left: 0;
-                opacity: 0.7;
-                -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
-                filter: alpha(opacity=70);
-                z-index: -1;
-            }
-
-            @media only screen and (max-width: 640px) {
-                #top-stars {
-                    bottom: 0;
-                }
-            }
-            #ezflo-screenshot {
-                max-width: 1100px;
-            }
-        </style>
+        <link rel="stylesheet" href="styles.pure.css" />
     </head>
     <body class="bg-indigo-700 text-center">
         <picture id="top-stars" class="object-cover w-screen h-screen">
-            <img src="./1920_stars.png"
+            <img src="./stars.png"
         /></picture>
 
         <section
@@ -97,7 +42,7 @@
                     id="ezflo-screenshot"
                     class="object-cover object-center w-screen md:w-full"
                 >
-                    <img src="./project-1.svg" alt="ezflo"
+                    <img src="./project.svg" alt="ezflo"
                 /></picture>
             </div>
             <div
@@ -167,9 +112,35 @@
                             Hacked data
                         </h1>
                         <span
-                            class="rounded-full px-2 py-1 text-sm font-mono bg-mauve text-gray-600 ml-3"
+                            class="rounded-full px-2 py-1 text-sm font-mono bg-mauve text-gray-200 ml-3"
                             >hot cake</span
                         >
+                    </div>
+                    <p
+                        class="mode-summary-copy text-gray-300 text-left ml-6 mb-5 w-1/2 min-w-64"
+                    >
+                        Having dual approval can prevent the criminal from
+                        completing the transaction by
+                        <b class="text-yellow-ezflo"
+                            >cross-checking verifying customer data</b
+                        >
+                        and known information, such as if a transaction is
+                        happening outside of the country or state the customer
+                        normally conducts business.
+                    </p>
+                </div>
+
+                <div
+                    id="sensor-mode-summary"
+                    class="flex flex-initial flex-col justify-center items-start"
+                >
+                    <div class="ezflo-mode mb-2 mt-12 flex flex-center">
+                        <span
+                            class="rounded-full h-3 w-3 bg-yellow-ezflo inline-block mr-3"
+                        ></span>
+                        <h1 class="font-bold text-2xl text-white">
+                            Blockchain, AI and ML
+                        </h1>
                     </div>
                     <p
                         class="mode-summary-copy text-gray-300 text-left ml-6 mb-5 w-1/2 min-w-64"
